@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+Checkpoint: Hosting a MERN App on Microsoft Azure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Objective: To deploy a MERN stack application on Microsoft Azure cloud platform.
 
-## Available Scripts
 
-In the project directory, you can run:
+Instructions
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Prepare Your MERN Application:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ensure that your MERN application is fully developed and tested locally.
+Make sure your application's backend (Node.js/Express) is connected to MongoDB for data storage.
+Create a Microsoft Azure Account:
 
-### `npm test`
+If you haven't already, sign up for a Microsoft Azure account.
+Access the Azure Portal and navigate to the dashboard.
+Set Up MongoDB Atlas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Since Azure doesn't offer MongoDB as a service directly, use MongoDB Atlas (MongoDB's cloud service) for your database.
+Sign up for a MongoDB Atlas account if you don't have one already.
+Create a new MongoDB cluster and configure it according to your application's requirements.
+Prepare Your MERN App for Deployment:
 
-### `npm run build`
+Update your MERN application's configuration to use environment variables for sensitive data like database credentials.
+Build your React frontend for production using npm run build.
+Create an Azure Web App Service:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the Azure Portal, navigate to "Create a resource" > "Web" > "Web App".
+Fill in the required details like app name, resource group, and region.
+Choose the appropriate pricing tier based on your requirements.
+Set Up Deployment Source:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In your Azure Web App's settings, navigate to "Deployment Center".
+Choose the deployment source as "Local Git" or connect to your preferred version control system (e.g., GitHub).
+Deploy Your MERN App:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If using Local Git, clone your Azure Web App's Git repository to your local machine.
+Copy your built React frontend files to a folder within your backend project (e.g., server/public).
+Commit and push your changes to Azure's Git repository.
+Azure will automatically detect changes and deploy your application.
+Configure Environment Variables:
 
-### `npm run eject`
+In your Azure Web App's settings, navigate to "Configuration".
+Set environment variables for your MERN application, including MongoDB connection string and other required configurations.
+Test Your Deployed MERN App:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Access your deployed MERN application through the URL provided by Azure.
+Test all functionalities to ensure proper deployment and database connectivity.
